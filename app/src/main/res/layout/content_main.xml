@@ -4,20 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
+    android:padding="16dp"
     tools:showIn="@layout/activity_main">
 
     <EditText
         android:id="@+id/edittext"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="23dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.906"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.731" />
 
 </android.support.constraint.ConstraintLayout>
+
+<!--If you we put the id to the view, the onRestoreInstanceSave() method store the value of that view
+and restore when activity is recreated-->
+
+<!--If we put the adjustpan for windowSoftImput attribute in android manifest file than whole activity scrolls
+instead of view scroll, scroll of view is default property -->
